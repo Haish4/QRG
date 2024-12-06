@@ -8,11 +8,11 @@ android {
 
     defaultConfig {
         applicationId = "com.example.qrg"
-        minSdk = 27
+        minSdk = 30
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
-
+        multiDexEnabled = true
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -29,6 +29,9 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
+    buildFeatures{
+        viewBinding = true
+    }
 }
 
 dependencies {
@@ -40,4 +43,14 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+
+    implementation(libs.zxing.android.embedded)
+
+    coreLibraryDesugaring(libs.desugar.jdk.libs)
+    implementation(libs.multidex)
+
+    //sdp
+    implementation(libs.sdp.android)
+    implementation(libs.ssp.android)
+
 }

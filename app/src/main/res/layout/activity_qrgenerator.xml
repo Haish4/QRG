@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:gravity="center"
+    >
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/QRiv"
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="@dimen/_150sdp" />
+
+    <EditText
+        android:id="@+id/inputText"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:background="@drawable/background_input"
+        android:hint="Text"
+        android:imeOptions="actionNext"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:paddingStart="@dimen/_16sdp"
+        android:paddingEnd="@dimen/_16sdp"
+        android:textColor="#000000"
+        android:textColorHint="#7A7777"
+        android:textAlignment="center"
+        android:textSize="@dimen/_13ssp"
+        android:layout_marginRight="@dimen/_25sdp"
+        android:layout_marginLeft="@dimen/_25sdp"/>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/generate"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_gravity="center"
+        android:text="Generate"
+        android:layout_marginTop="@dimen/_20sdp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/download"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_gravity="center"
+        android:text="Download" />
+
+
+
+</LinearLayout>
