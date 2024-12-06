@@ -1,7 +1,9 @@
 package com.example.qrg;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.storage.StorageManager;
 import android.os.storage.StorageVolume;
@@ -43,6 +45,16 @@ public class QRGeneratorActivity extends AppCompatActivity {
     private void setListener() {
         binding.generate.setOnClickListener(v -> generate());
         binding.download.setOnClickListener(v -> download());
+        binding.github.setOnClickListener(v -> {
+            Uri uri = Uri.parse("https://github.com/Haish4");
+            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+            startActivity(intent);
+        });
+        binding.instagram.setOnClickListener(v -> {
+            Uri uri = Uri.parse("https://www.instagram.com/_.haisha/");
+            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+            startActivity(intent);
+        });
     }
 
     private void generate() {
