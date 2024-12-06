@@ -9,7 +9,7 @@ jobs:
 
     runs-on: ubuntu-latest
     permissions:
-      contents: write  # Required for uploading release assets
+      contents: write  
 
     steps:
     - uses: actions/checkout@v4
@@ -27,7 +27,7 @@ jobs:
       uses: gradle/actions/setup-gradle@v4.0.0
 
     - name: Build APK
-      run: ./gradlew assembleDebug
+      run: ./gradlew assembleRelease 
 
     - name: List APK Output Directory
       run: ls -R app/build/outputs/apk/
@@ -36,9 +36,8 @@ jobs:
       uses: actions/upload-release-asset@v1
       with:
         upload_url: ${{ github.event.release.upload_url }}
-        asset_path: app/build/outputs/apk/debug/app-debug.apk
-        asset_name: app-debug.apk
+        asset_path: app/build/outputs/apk/release/app-release.apk  
+        asset_name: app-release.apk  
         asset_content_type: application/vnd.android.package-archive
       env:
-        GITHUB_TOKEN: ${{ secrets.YOUR_PERSONAL_ACCESS_TOKEN }}
-
+        GITHUB_TOKEN: ${{ secrets.YOUR_PERSONAL_ACCESS_TOKEN }}  
