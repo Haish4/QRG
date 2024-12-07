@@ -8,7 +8,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.qrg"
-        minSdk = 30
+        minSdk = 28
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -55,6 +55,8 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+    implementation ("androidx.core:core:1.9.0")
+    implementation ("androidx.appcompat:appcompat:1.6.1")
 
     implementation(libs.zxing.android.embedded)
 

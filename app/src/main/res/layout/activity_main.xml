@@ -15,8 +15,8 @@
 
 <androidx.appcompat.widget.AppCompatButton
     android:id="@+id/generateButton"
-    android:layout_width="@dimen/_100sdp"
-    android:layout_height="@dimen/_40sdp"
+    android:layout_width="@dimen/_110sdp"
+    android:layout_height="@dimen/_50sdp"
     android:layout_gravity="center"
     android:text="QR Generator"
     />
